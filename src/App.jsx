@@ -1,21 +1,19 @@
 import { useState } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
 import "./App.css";
+import Background from "./components/Background/Background";
 
 function App() {
-  const [count, setCount] = useState(0);
+  const [currentColor, setCurrentColor] = useState("#FF69B4");
 
+  const handleChangeColor = (color) => {
+    setCurrentColor(color);
+  };
   return (
     <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
+      <Background
+        currentColor={currentColor}
+        onChangeColor={handleChangeColor}
+      />
       <h1>TaskMaster</h1>
       <p>Vite + React project</p>
     </>
