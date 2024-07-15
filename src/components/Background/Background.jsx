@@ -1,6 +1,6 @@
 import css from "./Background.module.css";
 import { useEffect } from "react";
-import bgColors from "../../background.json";
+import bgColors from "../../data/background.json";
 
 const Background = ({ currentColor, onChangeColor }) => {
   useEffect(() => {
