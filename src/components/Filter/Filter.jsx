@@ -3,7 +3,7 @@ import css from "./Filter.module.css";
 export default function Filter({ value, onFilter }) {
   return (
     <div>
-      <p className={css.label}>Search...</p>
+      <p className={css.label}>Search ⬇️</p>
       <input
         type="text"
         value={value}

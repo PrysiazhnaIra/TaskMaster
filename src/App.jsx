@@ -8,7 +8,7 @@ import Form from "./components/Form/Form";
 import TaskList from "./components/TaskList/TaskList";
 
 function App() {
-  const [currentColor, setCurrentColor] = useState("#FF69B4");
+  const [currentColor, setCurrentColor] = useState("#90EE90");
 
   const handleChangeColor = (color) => {
     setCurrentColor(color);
@@ -39,11 +39,11 @@ function App() {
         currentColor={currentColor}
         onChangeColor={handleChangeColor}
       />
-      <h1>Task Master</h1>
-      <p>Vite + React project</p>
+      <h1 className="title">Task Master</h1>
       <Form onAdd={addTask} />
       <Filter value={filter} onFilter={setFilter} />
       <TaskList tasks={filteredTasks} onDelete={deleteTask} />
+      <p className="footer">Vite + React project - IraPrysiazhna</p>
     </div>
   );
 }

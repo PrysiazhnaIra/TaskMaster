@@ -16,7 +16,9 @@ export default function Form({ onAdd }) {
   return (
     <form className={css.form} onSubmit={handleSubmit}>
       <input className={css.field} type="text" name="text" />
-      <button type="submit">Add task</button>
+      <button type="submit" className={css.btn}>
+        Add task
+      </button>
     </form>
   );
 }
